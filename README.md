@@ -54,7 +54,7 @@ Once you have the prerequisites installed, run the following commands.
 The `cd` and `bower install` commands are necessry to install frontend packages like [Swagger-UI](http://petstore.swagger.wordnik.com/) and [Swagger Editor](http://editor.swagger.wordnik.com#/edit).  These frontend packages __are not__ included in Swagger-Suite's NPM package so that they can be updated independently.
 
 #### Running the samples
-Swagger-Suite comes with two sample apps: the ubiquitous "Swagger Petstore" is a simple example, and the "User Manager" demonstrates more advanced concepts.  To run the petstore sample, just `cd` into the `node_modules/swagger-server` folder and run the following command:
+Swagger-Suite comes with two sample apps: the ubiquitous "Swagger Petstore" is a simple example, and the "User Manager" demonstrates more advanced concepts.  To run the petstore sample, just `cd` into the `node_modules/swagger-suite` folder and run the following command:
 
     cd node_modules/swagger-suite
     npm run-script petstore
