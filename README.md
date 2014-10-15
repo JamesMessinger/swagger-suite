@@ -44,25 +44,40 @@ Installation
 * __[Bower](http://bower.io)__ - Swagger-Suite uses Bower to manage all of its frontend packages.
 
 ### Install Steps
-Once you have the prerequisites installed, run the following commands.  This installs Swagger-Suite and all of its frontend packages.
+Once you have the prerequisites installed, run the following commands.
 
     npm install swagger-suite
     
     cd node_modules/swagger-suite
     bower install
 
-That's all there is to it!  See your `node_modules/swagger-suite/samples` directory for sample Swagger files and two complete sample APIs to get you started.  
+The `cd` and `bower install` commands are necessry to install frontend packages like [Swagger-UI](http://petstore.swagger.wordnik.com/) and [Swagger Editor](http://editor.swagger.wordnik.com#/edit).  These frontend packages __are not__ included in Swagger-Suite's NPM package so that they can be updated independently.
 
-### Running It
-The following command will run a sample "User Manager" app.  The app will run in debug mode, so you can see everything it's doing in the console window.  
+#### Running the samples
+Swagger-Suite comes with two sample apps: the ubiquitous "Swagger Petstore" is a simple example, and the "User Manager" demonstrates more advanced concepts.  To run the petstore sample, just `cd` into the `node_modules/swagger-server` folder and run the following command:
 
-    npm run-script debug
+    cd node_modules/swagger-server
+    npm run-script petstore
 
-To run it in normal (non-debug) mode, use this command instead:
+Or, on Windows:
 
-    npm run-script start
+    cd node_modules\swagger-server
+    npm run-script petstore-windows
+    
+Similarly, to run the "User Manager" sample insead, run:
 
-Either way, once Swagger-Suite is running, you can open your web browser and go to __[http://localhost:3000](http://localhost:3000)__.   Why port 3000?  Because that's what's specified in the sample Swagger file.  If you use a different port number in your Swagger file, then Swagger-Suite will run on that port instead.
+    cd node_modules/swagger-server
+    npm run-script users
+    
+Or, on Windows: 
+
+    cd node_modules\swagger-server
+    npm run-script users-windows
+
+__Note:__ All of the above commands run the sample apps in DEBUG mode, which produces _a lot_ of output in the console window.  
+
+#### Now open your browser
+Both of the sample apps are configured to run at __[http://localhost:3000](http://localhost:3000)__, so open your browser and go check 'em out!
 
 
 Walkthrough
