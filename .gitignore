@@ -1,0 +1,8 @@
+**/*~
+**/._*
+**/.DS_Store
+npm-debug.log
+.idea
+node_modules
+static/bower_components
+static/img/src

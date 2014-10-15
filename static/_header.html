@@ -1,0 +1,81 @@
+<header role="banner" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-header pull-left">
+    <a href="/" class="navbar-brand">
+      <span class="api-title">Swagger-Suite</span>
+      <small class="api-version"></small>
+    </a>
+  </div>
+
+  <nav role="navigation" class="nav navbar-nav navbar-right pull-right">
+    <a id="server-error" title="There's a problem. Click here for details." data-placement="bottom"
+       class="navbar-hover-effect hidden" data-toggle="modal" data-target="#error-modal">
+      <span class="sr-only">Error</span>
+    </a>
+
+    <a id="swagger-editor" title="Edit your Swagger spec" data-placement="bottom" class="navbar-hover-effect hidden">
+      <span class="sr-only">Swagger Editor</span>
+    </a>
+
+    <a id="swagger-ui" title="Test your API in Swagger UI" data-placement="bottom" class="navbar-hover-effect hidden">
+      <span class="sr-only">Swagger UI</span>
+    </a>
+
+    <a id="postman" title="Test this API in Postman" data-placement="bottom" class="navbar-hover-effect"
+        data-toggle="modal" data-target="#postman-modal">
+      <span class="sr-only">Postman</span>
+    </a>
+
+    <a id="github" href="https://github.com/BigstickCarpet/swagger-suite" title="Swagger-Suite on GitHub"
+       data-placement="bottom" class="navbar-hover-effect">
+      <span class="sr-only">Swagger Suite</span>
+    </a>
+  </nav>
+</header>
+
+<article id="error-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="error-modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <header class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <i aria-hidden="true" class="glyphicon glyphicon-remove"></i>
+          <span class="sr-only">Close</span>
+        </button>
+
+        <h4 id="error-modal-title" class="modal-title">Error</h4>
+      </header>
+
+      <div class="modal-body">
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </footer>
+    </div>
+  </div>
+</article>
+
+<article id="postman-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="postman-modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <header class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <i aria-hidden="true" class="glyphicon glyphicon-remove"></i>
+          <span class="sr-only">Close</span>
+        </button>
+
+        <h4 id="postman-modal-title" class="modal-title">Postman</h4>
+      </header>
+
+      <div class="modal-body">
+        <p>&nbsp;</p>
+        <a href="http://getpostman.com"><img src="https://www.getpostman.com/img-rebrand/logo.png" /></a>
+        &nbsp; support coming soon!
+        <p>&nbsp;</p>
+      </div>
+
+      <footer class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </footer>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,40 @@
+{
+  "name": "swagger-suite",
+  "version": "0.0.1",
+  "description": "The complete suite of Swagger tools, packaged together seamlessly and ready to use. Edit your API spec, mock it, test it, and document it, all from one app.",
+  "keywords": [
+    "rest",
+    "json",
+    "yaml",
+    "api",
+    "spec",
+    "specification",
+    "contract",
+    "schema",
+    "editor",
+    "mock",
+    "fake",
+    "test",
+    "docs",
+    "documentation",
+    "server",
+    "express",
+    "connect",
+    "swagger"
+  ],
+  "authors": [
+    "James Messinger"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "https://github.com/BigstickCarpet/swagger-suite",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.2.0",
+    "swagger-suite-editor": "*"
+  }
+}

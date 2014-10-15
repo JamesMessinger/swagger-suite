@@ -1,0 +1,113 @@
+//
+// Header bar at the top of every page
+// ----------------------------------------------
+
+.navbar-inverse {
+  margin: 0;
+
+  .navbar-brand {
+    .api-version {
+      font-size: $font-size-small * .9;
+      font-style: italic;
+
+      &:before {
+        content: 'v';
+      }
+    }
+  }
+
+  .navbar-nav.navbar-right:last-child {
+    margin-right: $padding-large-horizontal;
+    height: $navbar-height;
+    padding-top: (($navbar-height - $navbar-icon-size) / 2);
+  }
+
+  .navbar-hover-effect {
+    display: inline-block;
+    position: relative;
+    height: $navbar-icon-size;
+    width: $navbar-icon-size;
+    margin: 0 4px;
+
+    &:before, &:after {
+      content: '';
+      background: no-repeat left top;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+
+    &:after {
+      background-position: 0 (-($navbar-icon-size + 1px));
+      z-index: 2;
+      opacity: 0;
+      -webkit-transition: opacity .75s;
+      transition: opacity .75s;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &#server-error {
+      -webkit-animation: attention .5s ease-in-out infinite alternate;
+      animation: attention .5s ease-in-out infinite alternate;
+
+      &:before, &:after {
+        background-image: url(../img/error-sprite.png);
+      }
+
+      &:after {
+        box-shadow: 0 0 20px black;
+      }
+    }
+
+    &#swagger-editor {
+      &:before, &:after {
+        background-image: url(../img/editor-sprite.png);
+      }
+
+      &:after {
+        box-shadow: 0 0 20px yellow;
+      }
+    }
+
+    &#swagger-ui {
+      &:before, &:after {
+        background-image: url(../img/swagger-sprite.png);
+      }
+
+      &:after {
+        box-shadow: 0 0 20px lighten($swagger-green, 10%);
+      }
+    }
+
+    &#postman {
+      &:before, &:after {
+        background-image: url(../img/postman-sprite.png);
+      }
+
+      &:after {
+        box-shadow: 0 0 20px orange;
+      }
+    }
+
+    &#github {
+      &:before, &:after {
+        background-image: url(../img/github-sprite.png);
+      }
+
+      &:after {
+        box-shadow: 0 0 20px lighten(#4183c4, 25%);
+      }
+    }
+  }
+}
+

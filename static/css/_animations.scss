@@ -1,0 +1,22 @@
+//
+// Animations
+// ----------------------------------------------
+
+// Used for the error alert icon
+@-webkit-keyframes attention {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes attention {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+

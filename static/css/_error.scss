@@ -1,0 +1,42 @@
+//
+// Error page styling
+// ----------------------------------------------
+#error-page {
+  padding-top: $navbar-height + $navbar-padding-vertical + $padding-large-vertical;
+
+  .jumbotron {
+    position: relative;
+    padding-bottom: 140px;
+
+    &:after {
+      content: "";
+      background: url(../img/swagger-logo.png) no-repeat center bottom;
+      background-size: 250px;
+      display: block;
+      height: 360px;
+      width: 100%;
+      position: absolute;
+      bottom: -125px;
+      left: 0;
+    }
+
+    @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      padding-bottom: 180px;
+
+      &:after {
+        background-size: 300px;
+        bottom: -150px;
+      }
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+      padding-bottom: 220px;
+
+      &:after {
+        background-size: 360px;
+        bottom: -180px;
+      }
+    }
+  }
+}
+

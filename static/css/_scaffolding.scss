@@ -1,0 +1,23 @@
+//
+// Scaffolding
+// ----------------------------------------------
+
+html,head,body,main {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding-top: $navbar-height;
+}
+
+main > iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+a {
+  cursor: pointer;
+}
