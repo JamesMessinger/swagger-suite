@@ -158,6 +158,7 @@
   // Don't logging polling requests from Swagger-Editor or Swagger-Suite's UI.  They quickly clutter-up the log.
   function dontLogPollingRequests(req, res) {
     return req.originalUrl === '/static/bower_components/swagger-suite-editor/dist/index.html'
+        || req.originalUrl === '/static/bower_components/swagger-suite-editor/dist/'
         || req.originalUrl === '/static/metadata.json';
   }
 
