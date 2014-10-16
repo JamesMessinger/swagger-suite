@@ -67,6 +67,14 @@
       &:after {
         box-shadow: 0 0 20px black;
       }
+
+      &.hidden {
+        // Don't set "display: none" for the error icon, because then the browser doesn't download the image
+        // until the icon is shown.  But if the error is a lost server connection, then the icon can't be downloaded.
+        // Setting "visibility: hidden" still causes the browser to download the file immediately.
+        display: inline-block !important;
+        visibility: hidden !important;
+      }
     }
 
     &#swagger-editor {
