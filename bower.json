@@ -20,7 +20,8 @@
     "server",
     "express",
     "connect",
-    "swagger"
+    "swagger",
+    "postman"
   ],
   "authors": [
     "James Messinger"

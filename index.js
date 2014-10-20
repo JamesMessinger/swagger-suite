@@ -17,14 +17,14 @@
    * @param {string} swaggerFile
    * the path of a Swagger spec file (JSON or YAML)
    *
-   * @param {swaggerSuite#settings} [settings]
+   * @param {swaggerSuite#defaults} [settings]
    * settings that determine how Swagger-Suite behaves and which features are enabled.
-   * You can edit {@link swaggerSuite#settings} directly rather than passing this property if you prefer.
+   * This object will be merged with the {@link swaggerSuite#defaults} object.
    *
    * @returns {SwaggerServer}
    */
   function swaggerSuite(swaggerFile, settings) {
-    settings = _.merge({}, settings, swaggerSuite.settings);
+    settings = _.merge({}, swaggerSuite.defaults, settings);
 
     // Create a Swagger-Server instance
     var server = new SwaggerServer(swaggerFile, settings.server);
@@ -41,12 +41,12 @@
 
 
   /**
-   * Settings that determine how the Swagger-Suite behaves and which features are enabled.
+   * The default settings that determine how the Swagger-Suite behaves and which features are enabled.
    *
    * @type {{docs: {enabled: boolean, route: string}, editor: {enabled: boolean, readOnly: boolean, route: string}, swaggerUI: {enabled: boolean, route: string}, api: {enabled: boolean, enableCORS: boolean, enableMocks: boolean}}}
-   * @name settings
+   * @name defaults
    */
-  swaggerSuite.settings = {
+  swaggerSuite.defaults = {
     /**
      * Swagger-Suite uses Swagger-Editor to provide HTML documentation of your RESTful API.
      * You can disable this, or change the documentation URL here.
