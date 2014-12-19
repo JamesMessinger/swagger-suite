@@ -1,6 +1,5 @@
 {
   "name": "swagger-suite",
-  "version": "0.0.6",
   "description": "The complete suite of Swagger tools, packaged together seamlessly and ready to use. Edit your API spec, mock it, test it, and document it, all from one app.",
   "keywords": [
     "rest",
